@@ -1,0 +1,571 @@
+#root {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================================================================*/
+/* ====================== ESTILOS COMUNES ========================= */
+/* ================================================================*/
+
+.contactCard a:hover {
+    color: #535bf2;
+}
+
+/* ========== WHATSAPP ========== */
+.whatsappBtn {
+    display: inline-block;
+    background: #25d366;
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.whatsappBtn:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    color: #ffffff !important;
+}
+
+/* ========== RESPONSIVE (OTRAS PÁGINAS) ========== */
+@media (max-width: 968px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+
+    .hero { height: 280px; }
+    .hero h1 { font-size: 2rem; }
+    .heroContent { padding: 2rem 1.5rem; }
+    .tagline { font-size: 1rem; }
+
+    .formSection,
+    .infoSection {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero { height: 220px; }
+    .hero h1 { font-size: 1.6rem; }
+
+    .container {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+
+    .formSection,
+    .infoSection {
+        padding: 1.25rem;
+    }
+
+    .submitBtn { width: 100%; }
+}
+
+/* ================================================================*/
+/* ====================== HOME SCREEN ============================= */
+/* ================================================================*/
+
+.homeScreen {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+/* ========== BANNER ========== */
+.homeBanner {
+    position: relative;
+    height: 30px;
+    padding: 7rem 2rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.homeBannerImage {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.homeBannerImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homeBannerOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.85) 0%, rgba(15, 52, 96, 0.7) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding: 4rem;
+}
+
+.homeBannerContent {
+    text-align: center;
+    color: #ffffff;
+    max-width: 1100px;
+}
+
+.homeBannerBadge {
+    display: inline-block;
+    background: rgba(100, 108, 255, 0.2);
+    border: 1px solid rgba(100, 108, 255, 0.45);
+    color: #a5b4fc;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+}
+
+.homeBannerContent h1 {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.homeBannerContent p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin: 0 0 2rem;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.homeBannerActions {
+    display: flex;
+    gap: 0.9rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.homeBannerBtn {
+    background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 14px rgba(100, 108, 255, 0.3);
+}
+
+.homeBannerBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+}
+
+.homeBannerBtnOutline {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 0.45rem 1.25rem;
+    border-radius: 8px;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.25s, background 0.25s;
+}
+
+.homeBannerBtnOutline:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ========== STATS STRIP ========== */
+.homeStatsStrip {
+    background: #f9f9f9;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: center;
+}
+
+.homeStatItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 3rem;
+    border-right: 1px solid #e8e8e8;
+    gap: 0.1rem;
+}
+
+.homeStatItem:last-child {
+    border-right: none;
+}
+
+.homeStatItem strong {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #213547;
+    line-height: 1.1;
+}
+
+.homeStatItem span {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ========== FACILITIES SECTION ========== */
+.facilitiesContainer {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.facilitiesHeader {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.facilitiesLabel {
+    display: inline-block;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #646cff;
+    margin-bottom: 0.5rem;
+}
+
+.facilitiesHeader h2 {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #213547;
+    margin: 0 0 0.75rem;
+}
+
+.facilitiesSubtitle {
+    font-size: 1rem;
+    color: #777;
+    margin: 0;
+    font-style: italic;
+}
+
+.facilitiesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-bottom: 25px;
+}
+
+/* ========== FACILITY CARD ========== */
+.facilityCard {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e8e8e8;
+}
+
+.facilityCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.facilityImageWrapper {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.facilityImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.facilityCard:hover .facilityImage {
+    transform: scale(1.06);
+}
+
+.facilityImageOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 52, 96, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.facilityCard:hover .facilityImageOverlay {
+    opacity: 1;
+}
+
+.facilityQuickBtn {
+    background: #ffffff;
+    color: #213547;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+.facilityQuickBtn:hover {
+    background: #f0f4ff;
+}
+
+.facilityContent {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.facilityContentTop {
+    flex-grow: 1;
+}
+
+.facilityBadge {
+    display: inline-block;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.22rem 0.7rem;
+    border-radius: 50px;
+    border: 1px solid;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.facilityContent h3 {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #213547;
+    margin: 0 0 0.5rem 0;
+}
+
+.facilityDescription {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.facilityInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e8e8e8;
+}
+
+.infoItem {
+    font-size: 0.85rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.facilityFooter {
+    padding: 0.75rem 1.5rem;
+    border-top: 1px solid #e8e8e8;
+    background: #f9f9f9;
+}
+
+.detailsBtn {
+    width: 100%;
+    background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 14px rgba(100, 108, 255, 0.3);
+    white-space: nowrap;
+}
+
+.detailsBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+}
+
+.detailsBtn:active {
+    transform: translateY(0);
+}
+
+/* ========== CTA SECTION ========== */
+.homeCtaSection {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.homeCtaContent {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.homeCtaContent h2 {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+}
+
+.homeCtaContent p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin: 0 0 2rem;
+    font-style: italic;
+}
+
+.homeCtaBtn {
+    background: #ffffff;
+    color: #213547;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.homeCtaBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== MODAL LEGAL ========== */
+.legal-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 0.2s ease;
+}
+
+.legal-modal-content {
+    background: #ffffff;
+    border-radius: 24px;
+    max-width: 860px;
+    width: 100%;
+    max-height: 96vh;
+    overflow: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    animation: slideUp 0.25s ease;
+    position: relative;
+    padding: 2rem 3rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ========== HOME SCREEN RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .homeBanner { height: 400px; }
+    .homeBannerContent h1 { font-size: 2rem; }
+    .homeBannerContent p { font-size: 1rem; }
+    .homeStatsStrip { display: none; }
+    .facilitiesContainer { margin: 2rem auto; }
+    .facilitiesHeader h2 { font-size: 1.5rem; }
+
+    .facilitiesGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .homeBanner { height: 340px; }
+    .homeBannerContent h1 { font-size: 1.6rem; }
+    .homeBannerContent p { font-size: 0.9rem; }
+
+    .facilitiesContainer {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+
+    .facilitiesHeader h2 { font-size: 1.3rem; }
+
+    .facilitiesGrid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .facilityCard { border-radius: 8px; }
+    .facilityImageWrapper { height: 180px; }
+    .facilityContent { padding: 1rem; }
+    .facilityFooter { padding: 0.75rem 1rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+    .legal-modal-overlay {
+        background: rgba(0, 0, 0, 0.72);
+    }
+    .legal-modal-content {
+        background: #1e1e2f;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+}

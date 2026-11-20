@@ -1,0 +1,330 @@
+.page {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* ========== HERO ========== */
+.hero {
+    position: relative;
+    height: 30px;
+    padding: 7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.85) 0%, rgba(15, 52, 96, 0.7) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.heroContent {
+    text-align: center;
+    color: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 16px;
+    max-width: 700px;
+}
+
+.heroImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.heroImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* ========== CONTENEDOR PRINCIPAL ========== */
+.container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+/* ========== SECCIONES ========== */
+.formSection,
+.infoSection {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e8e8;
+}
+
+.formSection h2,
+.infoSection h2 {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #213547;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #646cff;
+}
+
+/* ========== FORMULARIO ========== */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    font-weight: 600;
+    color: #213547;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    background: #fafafa;
+    color: #213547;
+    line-height: 1.5;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #999;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #646cff;
+    box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.15);
+    background: #ffffff;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* ========== BOTÓN ENVIAR ========== */
+.submitBtn {
+    background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+    color: #ffffff;
+    padding: 14px 32px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s, opacity 0.25s;
+    box-shadow: 0 4px 14px rgba(100, 108, 255, 0.3);
+    margin-top: 0.5rem;
+    letter-spacing: 0.3px;
+}
+
+.submitBtn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+}
+
+.submitBtn:focus,
+.submitBtn:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ========== MENSAJES ========== */
+.successMessage {
+    background: #d4edda;
+    color: #155724;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.errorMessage {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid #dc3545;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ========== TARJETAS DE CONTACTO ========== */
+.contactCards {
+    display: grid;
+    gap: 1rem;
+}
+
+.contactCard {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #e8e8e8;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.contactCard:hover {
+    border-color: #646cff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.contactCard svg {
+    color: #646cff;
+    margin-bottom: 0.5rem;
+}
+
+.contactCard h3 {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #213547;
+    margin-bottom: 0.4rem;
+}
+
+.contactCard p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contactCard a {
+    color: #646cff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+.contactCard a:hover {
+    color: #535bf2;
+}
+
+/* ========== WHATSAPP ========== */
+.whatsappBtn {
+    display: inline-block;
+    background: #25d366;
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.whatsappBtn:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    color: #ffffff !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 968px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+
+    .hero {
+        height: 280px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .heroContent {
+        padding: 2rem 1.5rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .formSection,
+    .infoSection {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 220px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+
+    .formSection,
+    .infoSection {
+        padding: 1.25rem;
+    }
+
+    .submitBtn {
+        width: 100%;
+    }
+}
